@@ -18,7 +18,7 @@ public class Main {
         while (hero.isDead() == false && enemy.isDead() == false) {
             turn++;
             System.out.printf("%dターン目開始！\n", turn);
-            hero.attack(enemy);
+            hero.attack(enemy);//最初で作ったコンストラクタにより、hero.メソッド名で関数の呼び出しをすることができる
             enemy.attack(hero);
         }
         System.out.println("戦闘終了");

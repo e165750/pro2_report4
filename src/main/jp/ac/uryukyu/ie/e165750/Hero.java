@@ -51,7 +51,7 @@ public class Hero {
      *
      * @param e 攻撃対象
      */
-    public void attack(Enemy e) {
+    public void attack(Enemy e) {//なぜeなのか気になるところだが、ここはひとまず妥協しておこう
         int damage = (int) (Math.random() * attack);
         System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.getName(), damage);
         e.wounded(damage);
