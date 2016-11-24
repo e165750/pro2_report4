@@ -5,10 +5,10 @@ package jp.ac.uryukyu.ie.e165750;
  */
 public class Enemy extends LivingThing {
 
-
     public Enemy(String name, int maximumHP, int attack) {//コンストラクタ
         super(name,maximumHP,attack);//ここでスーパークラスからの継承を受けている
     }
+
 
     @Override //オーバーライドする事によってスーパークラスから継承したメソッドに上書きすることができる
     public void wounded(int damage) {

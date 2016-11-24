@@ -12,6 +12,12 @@ public class LivingThing {//これはスーパークラス（親クラス）に�
      * boolean dead; //敵の生死状態。true=死亡。
      * Created by tnal on 2016/11/13.
      */
+    /*
+    private String name;
+    private int hitPoint;
+    private int attack;
+    private boolean dead;
+    */
     String name;
     int hitPoint;
     int attack;
@@ -37,13 +43,28 @@ public class LivingThing {//これはスーパークラス（親クラス）に�
      * @return boolean
      */
 
-    public boolean isDead() {
-        return dead;
-    }
+    //セッターでprivateの変数を呼び出す
+    public void setDead(boolean dead){dead = false;}
+
+    public void setName(String name){this.name = name;}
+
+    public void setAttack(int attack){this.attack = attack;}
+
+    public void setHitPoint(int hitPoint){this.hitPoint = hitPoint;}
+
+
+    //ゲッターでセッターで呼び出した変数を取り込んでいる
+    public boolean isDead() {return dead;}
 
     public String getName() {
         return name;
     }
+
+    public  int getAttack(){return attack;}
+
+    public int getHitPoint(){return hitPoint;}
+
+
 
     /**
      * 攻撃するメソッド。
